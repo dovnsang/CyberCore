@@ -63,15 +63,14 @@
     <script>
         $(document).ready(function () {
             let maKH = $('#maKH');
-            let viTri = $('#viTri');
-            let trangThai = $('#trangThai');
+            let tenKH = $('#tenKH');
+            let diaChi = $('#diaChi');
+            let soDienThoai = $('#soDienThoai');
+            let diaChiEmail = $('#diaChiEmail');
 
-            [maKH, viTri].forEach(item => item.on('input', function () {
+            [maKH, tenKH, diaChi, soDienThoai, diaChiEmail].forEach(item => item.on('input', function () {
                 $(this).removeClass('is-invalid');
             }))
-            trangThai.on('input', function () {
-                $(this).removeClass('is-invalid')
-            })
         })
     </script>
 </c:set>

@@ -54,14 +54,12 @@
         $(document).ready(function () {
             let maDV = $('#maDV');
             let tenDV = $('#tenDV');
-            let trangThai = $('#trangThai');
+            let donViTinh = $('#donViTinh');
+            let donGia = $('#donGia');
 
-            [maDV, tenDV].forEach(item => item.on('input', function () {
+            [maDV, tenDV, donViTinh, donGia].forEach(item => item.on('input', function () {
                 $(this).removeClass('is-invalid');
             }))
-            trangThai.on('input', function () {
-                $(this).removeClass('is-invalid')
-            })
         })
     </script>
 </c:set>

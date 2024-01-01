@@ -3,6 +3,7 @@
 
 <c:set var="pageTitle" value="Tạo Mới Khách Hàng"/>
 <c:set var="pageContent">
+    <h3>${pageTitle}</h3>
     <form method="post">
         <div class="form-group">
             <label for="maKH">Mã Khách Hàng</label>
