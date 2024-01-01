@@ -1,9 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<c:set var="pageTitle" value="Tạo Mới Máy"/>
+<c:set var="pageTitle" value="Cập Nhật Máy"/>
 <c:set var="pageContent">
-    <form method="post">
+    <form action="/may/update" method="post">
         <div class="form-group">
             <label for="maMay">Mã Máy</label>
             <input type="text"
@@ -11,6 +11,7 @@
                    class="form-control ${empty error.maMay ? '' : 'is-invalid'}"
                    name="maMay"
                    value="${may.maMay}"
+                   readonly
             >
             <div class="invalid-feedback">${error.maMay}</div>
         </div>
