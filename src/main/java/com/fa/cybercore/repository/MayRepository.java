@@ -19,7 +19,7 @@ public interface MayRepository extends JpaRepository<May, String> {
 
     May findByMaMay(String maMay);
 
-    @Query(value = "SELECT * FROM MAY WHERE CONCAT(MaMay, TrangThai, ViTri) LIKE N'%'+:query+'%'",
+    @Query(value = "SELECT * FROM MAY WHERE CONCAT(MaMay, TrangThai, ViTri) LIKE N'%' + :query + '%'",
             countQuery = "SELECT COUNT(*) FROM MAY WHERE CONCAT(MaMay, TrangThai, ViTri) LIKE N'%'+:query+'%'",
             nativeQuery = true)
     Page<May> findAll(@Param("query") String query, Pageable pageable);

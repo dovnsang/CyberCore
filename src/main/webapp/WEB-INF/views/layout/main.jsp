@@ -48,6 +48,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/may">Danh Sách Máy</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/khachhang">Danh Sách Khách Hàng</a>
+                </li>
             </ul>
         </div>
     </nav>

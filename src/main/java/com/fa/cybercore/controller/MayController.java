@@ -14,7 +14,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -63,10 +62,9 @@ public class MayController {
                           Pageable pageable,
                           Model model) {
         Page<May> mayPage = mayRepository.findAll(query == null ? "" : query, pageable);
-        List<May> mayList = mayPage.getContent();
 
-        model.addAttribute("itemList", mayList);
         model.addAttribute("query", query);
+        model.addAttribute("itemList", mayPage.getContent());
         model.addAttribute("currentPage", mayPage.getNumber());
         model.addAttribute("pageSize", mayPage.getSize());
         model.addAttribute("totalPages", mayPage.getTotalPages());
