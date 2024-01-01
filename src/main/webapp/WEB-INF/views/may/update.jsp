@@ -3,6 +3,7 @@
 
 <c:set var="pageTitle" value="Cập Nhật Máy"/>
 <c:set var="pageContent">
+    <h3>${pageTitle}</h3>
     <form action="/may/update" method="post">
         <div class="form-group">
             <label for="maMay">Mã Máy</label>
@@ -33,7 +34,8 @@
                 <option value="" ${empty may.trangThai ? 'selected' : ''} disabled>...</option>
                 <option value="Rảnh" $${may.trangThai eq 'Rảnh' ? 'selected' : ''}>Rảnh</option>
                 <option value="Đang sử dụng" ${may.trangThai eq 'Đang sử dụng' ? 'selected' : ''}>Đang sử dụng</option>
-                <option value="Đang sửa chữa" ${may.trangThai eq 'Đang sửa chữa' ? 'selected' : ''}>Đang sửa chữa</option>
+                <option value="Đang sửa chữa" ${may.trangThai eq 'Đang sửa chữa' ? 'selected' : ''}>Đang sửa chữa
+                </option>
             </select>
             <div class="invalid-feedback">${error.trangThai}</div>
         </div>

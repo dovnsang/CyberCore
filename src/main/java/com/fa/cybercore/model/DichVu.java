@@ -24,7 +24,7 @@ public class DichVu {
     @Column(name = "TenDV", columnDefinition = "nvarchar(255)")
     private String tenDV;
     @NotBlank(message = "Vui lòng chọn đơn vị tính.")
-    @Column(name = "DonViTinh")
+    @Column(name = "DonViTinh", columnDefinition = "nvarchar(50)")
     private String donViTinh;
     @NotNull(message = "Vui lòng nhập đơn giá.")
     @DecimalMin(value = "1.0", inclusive = false, message = "Đơn giá phải lớn hơn 0")
