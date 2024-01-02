@@ -3,6 +3,9 @@ package com.fa.cybercore.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author: Sang
@@ -14,6 +17,7 @@ import javax.persistence.*;
 @Data
 public class SuDungMay {
     @EmbeddedId
+    @Valid
     private SuDungMayId id;
 
     @ManyToOne
@@ -25,5 +29,7 @@ public class SuDungMay {
     private May may;
 
     @Column(name = "ThoiGianSuDung")
-    private long thoiGianSuDung;
+    @NotNull(message = "Vui lòng nhập thời gian sử dụng.")
+    @Min(value = 1, message = "Thời gian sử dụng phải lớn hơn 0.")
+    private Long thoiGianSuDung;
 }

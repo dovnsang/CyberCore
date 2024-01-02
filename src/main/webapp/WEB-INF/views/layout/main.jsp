@@ -34,28 +34,7 @@
 </nav>
 <div class="container-fluid row vw-100">
     <nav class="sidebar col-2">
-        <div class="sidebar-sticky pt-3">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="/may/create">Tạo Mới Máy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/khachhang/create">Tạo Mới Khách Hàng</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dichvu/create">Tạo Dịch Vụ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/may">Danh Sách Máy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/khachhang">Danh Sách Khách Hàng</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dichvu">Danh Sách Dịch Vụ</a>
-                </li>
-            </ul>
-        </div>
+        <%@include file="../common/sidebar.jsp" %>
     </nav>
     <div class="main-content col-10 pt-3">
         ${pageContent}

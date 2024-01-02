@@ -1,10 +1,12 @@
 package com.fa.cybercore.model;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.JoinColumn;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -17,12 +19,21 @@ import java.time.LocalTime;
 @Embeddable
 @Data
 public class SuDungMayId implements Serializable {
-    @JoinColumn(name = "MaKH")
+    @Column(name = "MaKH")
+    @NotBlank(message = "Vui lòng chọn mã khách hàng.")
     private String maKH;
-    @JoinColumn(name = "MaMay")
+
+    @Column(name = "MaMay")
+    @NotBlank(message = "Vui lòng chọn mã máy.")
     private String maMay;
+
     @Column(name = "NgayBatDauSuDung")
+    @NotNull(message = "Vui lòng chọn ngày bắt đầu sử dụng.")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate ngayBatDauSuDung;
+
     @Column(name = "GioBatDauSuDung")
+    @NotNull(message = "Vui lòng chọn giờ bắt đầu sử dụng.")
+    @DateTimeFormat(pattern = "HH:mm")
     private LocalTime gioBatDauSuDung;
 }
