@@ -47,7 +47,7 @@
               Bạn có chắc muốn xoá ${khachHang.maKH}
             </div>
             <div class="modal-footer">
-              <a href="/may/delete/${khachHang.maKH}" class="btn btn-danger">Đồng ý</a>
+              <a href="/khachhang/delete/${khachHang.maKH}" class="btn btn-danger">Đồng ý</a>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
             </div>
           </div>
