@@ -18,23 +18,23 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="item" varStatus="status" items="${itemList}">
+    <c:forEach var="khachHang" varStatus="status" items="${itemList}">
       <tr>
-        <td>${item.maKH}</td>
-        <td>${item.tenKH}</td>
-        <td>${item.diaChi}</td>
-        <td>${item.soDienThoai}</td>
-        <td>${item.diaChiEmail}</td>
+        <td>${khachHang.maKH}</td>
+        <td>${khachHang.tenKH}</td>
+        <td>${khachHang.diaChi}</td>
+        <td>${khachHang.soDienThoai}</td>
+        <td>${khachHang.diaChiEmail}</td>
         <td class="d-flex">
-          <a href="/khachhang/update/${item.maKH}" class="btn btn-primary mr-2">Cập
+          <a href="/khachhang/update/${khachHang.maKH}" class="btn btn-primary mr-2">Cập
             nhật
           </a>
-          <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal${item.maKH}">Xoá
+          <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal${khachHang.maKH}">Xoá
           </button>
         </td>
       </tr>
       <!-- Delete Modal -->
-      <div class="modal fade" id="deleteModal${item.maKH}" tabindex="-1">
+      <div class="modal fade" id="deleteModal${khachHang.maKH}" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -44,10 +44,10 @@
               </button>
             </div>
             <div class="modal-body">
-              Bạn có chắc muốn xoá ${item.maKH}
+              Bạn có chắc muốn xoá ${khachHang.maKH}
             </div>
             <div class="modal-footer">
-              <a href="/may/delete/${item.maKH}" class="btn btn-danger">Đồng ý</a>
+              <a href="/may/delete/${khachHang.maKH}" class="btn btn-danger">Đồng ý</a>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
             </div>
           </div>

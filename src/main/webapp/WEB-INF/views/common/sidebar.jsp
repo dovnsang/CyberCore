@@ -26,5 +26,8 @@
         <li class="nav-item">
             <a class="nav-link" href="/sudungdichvu">Sử Dụng Dịch Vụ</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/statistic">Thống Kê</a>
+        </li>
     </ul>
 </div>

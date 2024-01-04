@@ -16,21 +16,21 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="item" varStatus="status" items="${itemList}">
+        <c:forEach var="khachHang" varStatus="status" items="${itemList}">
             <tr>
-                <td>${item.maMay}</td>
-                <td>${item.viTri}</td>
-                <td>${item.trangThai}</td>
+                <td>${khachHang.maMay}</td>
+                <td>${khachHang.viTri}</td>
+                <td>${khachHang.trangThai}</td>
                 <td class="d-flex">
-                    <a href="/may/update/${item.maMay}" class="btn btn-primary mr-2">Cập
+                    <a href="/may/update/${khachHang.maMay}" class="btn btn-primary mr-2">Cập
                         nhật
                     </a>
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal${item.maMay}">Xoá
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal${khachHang.maMay}">Xoá
                     </button>
                 </td>
             </tr>
             <!-- Delete Modal -->
-            <div class="modal fade" id="deleteModal${item.maMay}" tabindex="-1">
+            <div class="modal fade" id="deleteModal${khachHang.maMay}" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -40,10 +40,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Bạn có chắc muốn xoá ${item.maMay}
+                            Bạn có chắc muốn xoá ${khachHang.maMay}
                         </div>
                         <div class="modal-footer">
-                            <a href="/may/delete/${item.maMay}" class="btn btn-danger">Đồng ý</a>
+                            <a href="/may/delete/${khachHang.maMay}" class="btn btn-danger">Đồng ý</a>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
                         </div>
                     </div>

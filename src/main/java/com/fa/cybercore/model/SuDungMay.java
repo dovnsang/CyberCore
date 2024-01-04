@@ -1,6 +1,7 @@
 package com.fa.cybercore.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -14,7 +15,8 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "SUDUNGMAY")
 @Entity
-@Data
+@Getter
+@Setter
 public class SuDungMay {
     @EmbeddedId
     @Valid
@@ -23,6 +25,7 @@ public class SuDungMay {
     @ManyToOne
     @JoinColumn(name = "MaKH", insertable = false, updatable = false)
     private KhachHang khachHang;
+
 
     @ManyToOne
     @JoinColumn(name = "MaMay", insertable = false, updatable = false)

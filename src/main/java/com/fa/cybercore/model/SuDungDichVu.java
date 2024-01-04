@@ -1,6 +1,7 @@
 package com.fa.cybercore.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -14,7 +15,8 @@ import javax.validation.constraints.NotNull;
 
 @Table(name = "SUDUNGDICHVU")
 @Entity
-@Data
+@Getter
+@Setter
 public class SuDungDichVu {
     @EmbeddedId
     @Valid

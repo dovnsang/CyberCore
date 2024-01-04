@@ -1,6 +1,8 @@
 package com.fa.cybercore.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,7 +16,8 @@ import java.util.List;
 
 @Table(name = "KHACHHANG")
 @Entity
-@Data
+@Getter
+@Setter
 public class KhachHang {
     @Id
     @NotBlank(message = "Vui lòng nhập mã khách hàng.")
@@ -39,8 +42,10 @@ public class KhachHang {
     private String diaChiEmail;
 
     @OneToMany(mappedBy = "khachHang")
+    @JsonIgnoreProperties("khachHang")
     private List<SuDungMay> suDungMayList;
 
     @OneToMany(mappedBy = "khachHang")
+    @JsonIgnoreProperties("khachHang")
     private List<SuDungDichVu> suDungDichVuList;
 }

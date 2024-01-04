@@ -15,11 +15,11 @@
                 <option value="" disabled ${empty suDungMay.id.maKH ? 'selected' : ''}>Vui lòng chọn khách hàng sử dụng
                     máy
                 </option>
-                <c:forEach var="item" items="${khachHangList}">
+                <c:forEach var="khachHang" items="${khachHangList}">
                     <option
-                            value="${item.maKH}"
-                        ${suDungMay.id.maKH eq item.maKH ? 'selected' : ''}
-                    >${item.maKH} - ${item.tenKH}</option>
+                            value="${khachHang.maKH}"
+                        ${suDungMay.id.maKH eq khachHang.maKH ? 'selected' : ''}
+                    >${khachHang.maKH} - ${khachHang.tenKH}</option>
                 </c:forEach>
             </select>
             <div class="invalid-feedback">${error.get("id.maKH")}</div>
@@ -34,11 +34,11 @@
             >
                 <option value="" disabled ${empty suDungMay.id.maMay ? 'selected' : ''}>Vui lòng chọn máy được sử dụng
                 </option>
-                <c:forEach var="item" items="${mayList}">
+                <c:forEach var="khachHang" items="${mayList}">
                     <option
-                            value="${item.maMay}"
-                        ${suDungMay.id.maMay eq item.maMay ? 'selected' : ''}
-                    >${item.maMay} - ${item.trangThai} - ${item.viTri}</option>
+                            value="${khachHang.maMay}"
+                        ${suDungMay.id.maMay eq khachHang.maMay ? 'selected' : ''}
+                    >${khachHang.maMay} - ${khachHang.trangThai} - ${khachHang.viTri}</option>
                 </c:forEach>
             </select>
             <div class="invalid-feedback">${error.get("id.maMay")}</div>

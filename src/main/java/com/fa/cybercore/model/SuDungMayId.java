@@ -1,6 +1,7 @@
 package com.fa.cybercore.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -17,7 +18,8 @@ import java.time.LocalTime;
  */
 
 @Embeddable
-@Data
+@Getter
+@Setter
 public class SuDungMayId implements Serializable {
     @Column(name = "MaKH")
     @NotBlank(message = "Vui lòng chọn mã khách hàng.")

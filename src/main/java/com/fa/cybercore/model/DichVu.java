@@ -1,9 +1,13 @@
 package com.fa.cybercore.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 /**
@@ -13,7 +17,8 @@ import java.util.List;
 
 @Table(name = "DICHVU")
 @Entity
-@Data
+@Getter
+@Setter
 public class DichVu {
     @Id
     @NotBlank(message = "Vui lòng nhập mã dịch vụ.")
