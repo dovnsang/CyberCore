@@ -4,7 +4,7 @@
 <c:set var="pageTitle" value="Cập Nhật Dịch Vụ"/>
 <c:set var="pageContent">
     <h3>${pageTitle}</h3>
-    <form action="/dichvu/update" method="post">
+    <form method="post">
         <div class="form-group">
             <label for="maDV">Mã Dịch Vụ</label>
             <input type="text"

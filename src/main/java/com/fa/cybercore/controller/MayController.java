@@ -78,7 +78,7 @@ public class MayController {
         return "may/update";
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update/{maMay}")
     public String update(@Valid @ModelAttribute("may") May may,
                          BindingResult bindingResult,
                          Model model,
@@ -91,7 +91,7 @@ public class MayController {
             }
             model.addAttribute("error", errors);
             model.addAttribute("may", may);
-            return "may/update/" + may.getMaMay();
+            return "may/update";
         }
 
         mayRepository.save(may);

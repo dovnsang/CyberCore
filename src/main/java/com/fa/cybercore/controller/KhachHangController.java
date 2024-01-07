@@ -81,7 +81,7 @@ public class KhachHangController {
         return "khachhang/update";
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update/{maKH}")
     public String update(@Valid @ModelAttribute("khachHang") KhachHang khachHang,
                          BindingResult bindingResult,
                          Model model,
@@ -94,7 +94,7 @@ public class KhachHangController {
             }
             model.addAttribute("error", errors);
             model.addAttribute("khachHang", khachHang);
-            return "khachhang/update/" + khachHang.getMaKH();
+            return "khachhang/update";
         }
 
         khachHangRepository.save(khachHang);

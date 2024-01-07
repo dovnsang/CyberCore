@@ -61,13 +61,13 @@ public class StatisticController {
         }
 
         statisticDtoList.sort(Comparator.comparing(StatisticDto::getMaKH)
-                .thenComparing(Comparator.comparing(StatisticDto::getTenKH))
-                .thenComparing(Comparator.comparing(StatisticDto::getMaMay))
-                .thenComparing(Comparator.comparing(StatisticDto::getNgayBatDauSuDung))
-                .thenComparing(Comparator.comparing(StatisticDto::getGioBatDauSuDung))
-                .thenComparing(Comparator.comparing(StatisticDto::getMaDV))
-                .thenComparing(Comparator.comparing(StatisticDto::getNgaySuDung))
-                .thenComparing(Comparator.comparing(StatisticDto::getGioSuDung))
+//                .thenComparing(Comparator.comparing(StatisticDto::getTenKH))
+//                .thenComparing(Comparator.comparing(StatisticDto::getMaMay))
+//                .thenComparing(Comparator.comparing(StatisticDto::getNgayBatDauSuDung))
+//                .thenComparing(Comparator.comparing(StatisticDto::getGioBatDauSuDung))
+//                .thenComparing(Comparator.comparing(StatisticDto::getMaDV))
+//                .thenComparing(Comparator.comparing(StatisticDto::getNgaySuDung))
+//                .thenComparing(Comparator.comparing(StatisticDto::getGioSuDung))
         );
 
         model.addAttribute("dtoList", statisticDtoList);

@@ -30,7 +30,7 @@ public class DichVuController {
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("dichVu", new DichVu());
-        return "/dichvu/create";
+        return "dichvu/create";
     }
 
     @PostMapping("/create")
@@ -49,7 +49,7 @@ public class DichVuController {
         if (!errors.isEmpty()) {
             model.addAttribute("dichVu", dichVu);
             model.addAttribute("error", errors);
-            return "/dichvu/create";
+            return "dichvu/create";
         }
         dichVuRepository.save(dichVu);
         redirectAttributes.addFlashAttribute("successMessage", "Tạo mới dịch vụ thành công.");
@@ -77,7 +77,7 @@ public class DichVuController {
         return "dichvu/update";
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update/{maDV}")
     public String update(@Valid @ModelAttribute("dichVu") DichVu dichVu,
                          BindingResult bindingResult,
                          Model model,
@@ -90,7 +90,7 @@ public class DichVuController {
             }
             model.addAttribute("error", errors);
             model.addAttribute("dichVu", dichVu);
-            return "dichvu/update/" + dichVu.getMaDV();
+            return "dichvu/update";
         }
 
         dichVuRepository.save(dichVu);
